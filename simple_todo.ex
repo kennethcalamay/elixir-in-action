@@ -1,8 +1,8 @@
 defmodule TodoList do
   def new, do: HashDict.new
 
-  def add_entry(todo_list, date, title) do
-    MultiDict.add(todo_list, date, title)
+  def add_entry(todo_list, entry) do
+    MultiDict.add(todo_list, entry.date, entry)
   end
 
   def entries(todo_list, date) do
